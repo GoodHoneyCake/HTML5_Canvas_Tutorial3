@@ -42,26 +42,11 @@ class App {
     for (let i = 0; i < this.totalParticles; i++) {
       const item = new GlowParticle(
         Math.random() * this.stageWidth,
-        Math.random() * this.stageHeight,
-        Math.random() * (this.maxRadius - this.minRadius) + this.minRadius,
-        COLORS[curColor]
+        Math.random() * this.stageHeight
       );
-      if (++curColor >= COLORS.length) {
-        curColor = 0;
-      }
-      this.particles[i] = item;
     }
   }
-  animate() {
-    window.requestAnimationFrame(this.animate.bind(this));
-
-    this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
-
-    for (let i = 0; i < this.totalParticles; i++) {
-      const item = this.particles[i];
-      item.animate(this.ctx, this.stageWidth, this.stageHeight);
-    }
-  }
+  animate() {}
 }
 
 window.onload = () => {
