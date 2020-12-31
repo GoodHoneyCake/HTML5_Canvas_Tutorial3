@@ -34,11 +34,6 @@ class App {
 
     this.createParticles();
   }
-  createParticles() {
-    let curColor = 0;
-    this.particles = [];
-    for (let i = 0; i < this.totalParticles; i++) {}
-  }
   animate() {}
 }
 
